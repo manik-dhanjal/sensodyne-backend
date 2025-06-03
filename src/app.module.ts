@@ -12,6 +12,7 @@ import {
 import { UserModule } from './user/user.module';
 import { APP_GUARD } from '@nestjs/core';
 import { RoleGuard } from './gaurds/role.gaurd';
+import { SensitivitySurveyModule } from './senstivity-survey/sensitivity-survey.module';
 
 @Module({
   imports: [
@@ -32,6 +33,7 @@ import { RoleGuard } from './gaurds/role.gaurd';
       inject: [ConfigService],
     }),
     UserModule,
+    SensitivitySurveyModule,
   ],
   controllers: [AppController],
   providers: [
